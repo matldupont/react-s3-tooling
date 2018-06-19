@@ -1,6 +1,9 @@
 {
   "parser": "babel-eslint",
   "extends": ["airbnb"],
+  "globals": {
+    "document": true
+  },
   "rules": {
     "strict": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
@@ -9,6 +12,7 @@
       "specialLink": [ "to", "hrefLeft", "hrefRight" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
   }
 }

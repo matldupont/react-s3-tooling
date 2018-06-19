@@ -1,37 +1,17 @@
-/* global document */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { injectGlobal } from 'styled-components';
+import React, { Fragment } from 'react';
+import { render } from 'react-dom';
 
-import App from './components/App';
+// Global stylesheet
+import './global.styled';
 
-/* eslint-disable */
-injectGlobal`
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
+import Main from './components/main';
+import Header from './components/header';
 
-  html {
-    font-size: 62.5%;
-  }
-
-  body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: #777;
-    padding: 3rem;
-    box-sizing: border-box;
-  }
-`;
-/* eslint-enable */
-
-ReactDOM.render(
-  <App />
-  , document.querySelector('.app'),
+const App = () => (
+  <Fragment>
+    <Header />
+    <Main />
+  </Fragment>
 );
+
+render(<App />, document.getElementById('root'));

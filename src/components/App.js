@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import { AppContainer } from './styled';
+// import axios from 'axios';
+import { AppContainer, Header } from './styled';
 
 
 class App extends Component {
@@ -9,7 +9,9 @@ class App extends Component {
 
   render() {
     return (
-      <AppContainer id="app" />
+      <AppContainer id="app">
+        <Header />
+      </AppContainer>
     );
   }
 }

@@ -7,7 +7,7 @@
    "corsConfiguration": [],
    "enableCloudfront": false,
    "retries": 20,
-   "domain": "yourdomain.com",
+   "domain": "woodward.dev",
    "configFile": ".s3-website.json",
    "cert": "-a"
 }
