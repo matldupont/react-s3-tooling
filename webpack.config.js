@@ -49,9 +49,6 @@ const config = {
     ],
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest'],
-    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
@@ -59,6 +56,19 @@ const config = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        default: false,
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'node-modules',
+          chunks: 'all',
+          minChunks: 2,
+        },
+      },
+    },
+  },
 
 };
 

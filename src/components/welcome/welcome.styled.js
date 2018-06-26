@@ -28,7 +28,7 @@ const WelcomeHeading = styled.h1`
   ${transitions['.2s']}
 `;
 
-export default {
+export {
   WelcomeSection,
   WelcomeTagline,
   WelcomeHeading,
