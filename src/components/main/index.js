@@ -4,6 +4,8 @@ import MainContainer from './main.styled';
 import Welcome from '../welcome';
 import Description from '../description';
 import PriceList from '../price_list';
+import Additional from '../additional';
+import Gallery from '../gallery';
 
 class Main extends React.Component {
   // state = {
@@ -31,6 +33,8 @@ class Main extends React.Component {
         </MainContainer>
         <Description />
         <PriceList />
+        <Additional />
+        <Gallery />
       </div>
     );
   }
